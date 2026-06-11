@@ -22,3 +22,5 @@ Configured MySQL database for the project.
 - config
 - exception
 
+## Initial project setup
+Initial project setup
