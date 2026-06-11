@@ -9,3 +9,6 @@ Spring Boot Food Ordering System
 - Spring Data JPA
 - MySQL
 - Lombok
+
+## Database Setup
+Configured MySQL database for the project.
