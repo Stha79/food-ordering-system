@@ -12,3 +12,12 @@ Spring Boot Food Ordering System
 
 ## Database Setup
 Configured MySQL database for the project.
+
+## Package Structure
+- controller
+- service
+- repository
+- entity
+- dto
+- config
+- exception
