@@ -24,3 +24,7 @@ Configured MySQL database for the project.
 
 ## Initial project setup
 Initial project setup
+
+## Screenshots
+
+See the screenshots folder
