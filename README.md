@@ -28,3 +28,15 @@ Initial project setup
 ## Screenshots
 
 See the screenshots folder
+
+## Features Implemented
+
+- Category Entity created
+- Category DTO created
+- Category Repository created
+- Category Service layer created
+- Category Controller created
+- Exception handling added
+- Database integration completed
+
+
