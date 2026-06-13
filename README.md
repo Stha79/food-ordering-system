@@ -39,4 +39,11 @@ See the screenshots folder
 - Exception handling added
 - Database integration completed
 
+## 📌 Category API
+
+### GET /api/category
+
+Returns all categories stored in the database.
+
+
 
