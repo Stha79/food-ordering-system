@@ -1,7 +1,7 @@
 package com.jumpstart.foodorderingsystem.exception;
 
 /**
- * Custom exception thrown when category is not found.
+ * Custom exception thrown when a category is not found.
  */
 public class CategoryNotFoundException extends RuntimeException {
 
