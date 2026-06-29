@@ -32,7 +32,7 @@ public class CategoryController {
     }
 
     /**
-     * Get a category by its ID.
+     * Get category by ID.
      */
     @GetMapping("/{id}")
     public ResponseEntity<CategoryDto> getCategoryById(
@@ -55,5 +55,31 @@ public class CategoryController {
         return ResponseEntity
                 .status(HttpStatus.CREATED)
                 .body(createdCategory);
+    }
+
+    /**
+     * Update an existing category.
+     */
+    @PutMapping("/{id}")
+    public ResponseEntity<CategoryDto> updateCategory(
+            @PathVariable Long id,
+            @RequestBody @Valid CategoryDto dto) {
+
+        CategoryDto updatedCategory =
+                categoryService.updateCategory(id, dto);
+
+        return ResponseEntity.ok(updatedCategory);
+    }
+
+    /**
+     * Delete a category.
+     */
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteCategory(
+            @PathVariable Long id) {
+
+        categoryService.deleteCategory(id);
+
+        return ResponseEntity.noContent().build();
     }
 }

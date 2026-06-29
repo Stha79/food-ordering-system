@@ -21,6 +21,9 @@ public class CategoryServiceImpl implements CategoryService {
         this.categoryRepository = categoryRepository;
     }
 
+    /**
+     * Get all categories.
+     */
     @Override
     public List<CategoryDto> getAllCategories() {
 
@@ -33,6 +36,9 @@ public class CategoryServiceImpl implements CategoryService {
                 .collect(Collectors.toList());
     }
 
+    /**
+     * Get category by ID.
+     */
     @Override
     public CategoryDto getCategoryById(Long id) {
 
@@ -46,6 +52,9 @@ public class CategoryServiceImpl implements CategoryService {
                 category.getName());
     }
 
+    /**
+     * Create a new category.
+     */
     @Override
     public CategoryDto addCategory(CategoryDto dto) {
 
@@ -60,6 +69,9 @@ public class CategoryServiceImpl implements CategoryService {
                 savedCategory.getName());
     }
 
+    /**
+     * Update an existing category.
+     */
     @Override
     public CategoryDto updateCategory(Long id, CategoryDto dto) {
 
@@ -76,5 +88,19 @@ public class CategoryServiceImpl implements CategoryService {
         return new CategoryDto(
                 updatedCategory.getId(),
                 updatedCategory.getName());
+    }
+
+    /**
+     * Delete a category.
+     */
+    @Override
+    public void deleteCategory(Long id) {
+
+        Category category = categoryRepository.findById(id)
+                .orElseThrow(() ->
+                        new CategoryNotFoundException(
+                                "Category not found with id: " + id));
+
+        categoryRepository.delete(category);
     }
 }
