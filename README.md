@@ -45,5 +45,41 @@ See the screenshots folder
 
 Returns all categories stored in the database.
 
+## API Response Format
+
+All API endpoints return a standard response structure to provide consistent responses across the application.
+
+### Success Response
+
+```json
+{
+  "statusCode": 200,
+  "message": "Category retrieved",
+  "data": {
+    "id": 1,
+    "name": "Burgers"
+  },
+  "timestamp": "2026-06-29T14:20:15"
+}
+```
+
+### Error Response
+
+```json
+{
+  "statusCode": 404,
+  "message": "Category not found with id: 9999",
+  "timestamp": "2026-06-29T14:21:05"
+}
+```
+
+### Response Fields
+
+| Field      | Description                                    |
+| ---------- | ---------------------------------------------- |
+| statusCode | HTTP status code returned by the API           |
+| message    | A human-readable message describing the result |
+| data       | The requested resource or returned data        |
+| timestamp  | Date and time when the response was generated  |
 
 
