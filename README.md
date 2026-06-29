@@ -46,4 +46,13 @@ See the screenshots folder
 Returns all categories stored in the database.
 
 
+## Endpoints
+
+| Method | URL                  | Body                    |
+| ------ | -------------------- | ----------------------- |
+| POST   | `/api/category`      | `{ "name": "Pizza" }`   |
+| GET    | `/api/category`      | -                       |
+| GET    | `/api/category/{id}` | -                       |
+| PUT    | `/api/category/{id}` | `{ "name": "Burgers" }` |
+| DELETE | `/api/category/{id}` | -                       |
 
